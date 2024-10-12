@@ -5,11 +5,14 @@ using namespace std;
 
 
 int main() {
-   int givenYear;
+   float var=2;
+   while (var >= 0) {
 
-   cin >> givenYear;
+   cout << var << endl;
 
-   
+   var -= 0.5;
+
+   }
 
    return 0;
 }
