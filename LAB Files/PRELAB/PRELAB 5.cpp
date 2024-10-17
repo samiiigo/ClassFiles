@@ -1,5 +1,6 @@
 // Samyog Shrestha ytx16@txstate.edu
 // 10/09/2024
+// Lab 5 Pre-Lab
 
 // Finish the following program which multiplies all integers from 1 to
 // the user's given number inclusively using a While Loop. The total should be

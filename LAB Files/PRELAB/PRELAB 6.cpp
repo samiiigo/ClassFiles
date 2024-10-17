@@ -1,6 +1,6 @@
 // Samyog Shrestha ytx16@txstate.edu
 // 10/09/2024
-// Lab 5 Pre-Lab
+// Lab 6 Pre-Lab
 
 // Finish the following program which adds up all integers from 1 to 
 // the user's given number inclusively using a FOR loop. The total should be 
