@@ -48,6 +48,7 @@ int main()
         while (num > i){
             cout << i << " x ";
             i++;
+            
         }
         cout << num << " = " << factorial << endl;
 
