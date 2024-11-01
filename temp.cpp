@@ -1,18 +1,28 @@
 #include <iostream>
 #include <iomanip>
 #include <cmath>
+#include <string>
 using namespace std;
 
+void doubleEven(int value)
+{  
+   cout << value << " " << (value * 2) << endl; 
+} 
 
-int main() {
-   float var=2;
-   while (var >= 0) {
+void tripleOdd(int value)
+{  
+   cout << value << " " << (value * 3) << endl; 
+} 
 
-   cout << var << endl;
-
-   var -= 0.5;
-
-   }
-
-   return 0;
-}
+int main()
+{  
+   int num;  
+   for (num = 1; num < 7; num++)
+   {  
+      if(num % 2 == 1)    
+            tripleOdd(num);  
+      else  
+            doubleEven(num);  
+   }  
+   return 0; 
+} 
