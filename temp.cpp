@@ -4,6 +4,7 @@
 #include <string>
 using namespace std;
 
+
 void doubleEven(int value)
 {  
    cout << value << " " << (value * 2) << endl; 
@@ -16,7 +17,14 @@ void tripleOdd(int value)
 
 int main()
 {  
-   int num;  
+   int num; 
+   
+   int pham[4]={1,2,3,4};
+
+   for (int i :pham) {
+      cout << i << endl;
+   }
+ 
    for (num = 1; num < 7; num++)
    {  
       if(num % 2 == 1)    
