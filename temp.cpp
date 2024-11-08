@@ -19,12 +19,12 @@ int main()
 {  
    int num; 
    
-   int pham[4]={1,2,3,4};
+   int nums[]={1,2,3,4};
 
-   for (int i :pham) {
+   for (int i :nums) {
       cout << i << endl;
    }
- 
+
    for (num = 1; num < 7; num++)
    {  
       if(num % 2 == 1)    
