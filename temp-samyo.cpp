@@ -1,30 +1,18 @@
 #include <iostream>
-#include <fstream>
-#include <iomanip>
 using namespace std;
 
+bool validate(string txt){
+   if (txt.substr(txt.length() - 4) == ".txt" || txt == "EXIT" || txt == "exit"){
+      return true;
+   }
+   return false;
+}
 int main()
-{
-    double previousOdometerReading, currentOdometerReading, fuelRefill, driveHours;
-    double fuelEfficiency, averageSpeed;
+{   
+   string txt;
+   cout << "Enter the string: ";
+   cin >> txt;
+   cout << validate(txt);
 
-    ifstream inputFile;
-    inputFile.open("DrivingInfo1.txt");
-
-    inputFile >> previousOdometerReading >> currentOdometerReading >> fuelRefill >> driveHours;
-
-    fuelEfficiency = (currentOdometerReading - previousOdometerReading) / fuelRefill;
-    averageSpeed = (currentOdometerReading - previousOdometerReading) / driveHours;
-
-    ofstream outputFile;
-    outputFile.open("DrivingStats.txt");
-
-    outputFile << fixed << setprecision(1);
-    outputFile << "The fuel efficiency is " << fuelEfficiency << " miles per gallon." << endl;
-    outputFile << "The average speed is " << averageSpeed << " miles per hour.";
-
-    inputFile.close();
-    outputFile.close();
-
-    return 0;
+   return 0;
 }

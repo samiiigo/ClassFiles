@@ -1,17 +1,34 @@
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
-int main()
-{
-    const double PI = 3.14159;
+void UpdateScoreVals(int scoreVals[], int numVals, int updateVal) {
+   int i;
 
-    cout << "Radius" << setw(8) << right << "Volume" << endl;
+   for (i = 0; i < numVals; ++i) {
+      scoreVals[i] = scoreVals[i] * updateVal;
+   }
+}
 
-    for (int radius = 1; radius < 11; radius++)
-    {
-        double volume = (4.0 / 3.0) * PI * radius * radius * radius;
-        cout << setw(6) << radius << setw(8) << fixed << setprecision(2) << volume << endl;
-    }
-    return 0;
+void PrintScoreVals(const int scoreVals[], int numVals) {
+   int i;
+
+   for (i = 0; i < numVals; ++i)  {
+      cout << scoreVals[i] << endl;
+   }
+}
+
+int main() {
+   const int NUM_SCORES = 3;
+   int quizScores[NUM_SCORES];
+   int scoreUpdate = 5;
+   int i;
+
+   for (i = 0; i < NUM_SCORES; ++i) {
+      cin >> quizScores[i];
+   }
+
+   UpdateScoreVals(quizScores, NUM_SCORES, scoreUpdate);
+   PrintScoreVals(quizScores, NUM_SCORES);
+
+   return 0;
 }
