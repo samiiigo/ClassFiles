@@ -56,7 +56,7 @@ int main()
     }
 
     cout << "Number with highest frequency : " << index+1 << " occurred "
-        << frequency[index] << " times" << endl;
+         << frequency[index] << " times" << endl;
     return 0;
 }
 

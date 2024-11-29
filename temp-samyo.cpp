@@ -1,18 +1,19 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
-bool validate(string txt){
-   if (txt.substr(txt.length() - 4) == ".txt" || txt == "EXIT" || txt == "exit"){
-      return true;
-   }
-   return false;
-}
-int main()
-{   
-   string txt;
-   cout << "Enter the string: ";
-   cin >> txt;
-   cout << validate(txt);
+int a = 10;
+
+int main() {
+
+   int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+
+   int a=30;
+
+
+
+   cout << ::a << endl <<a;
 
    return 0;
 }

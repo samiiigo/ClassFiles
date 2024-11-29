@@ -38,23 +38,27 @@ using namespace std;
 //*****************************************************************************
 
 int DaysInFeb(int userYear) {
+    // Check if the year is divisible by 4
     if (userYear % 4 == 0) {
+        // Check if the year is a century year
         if (userYear % 100 == 0) {
+            // Check if the century year is divisible by 400
             if (userYear % 400 == 0) {
-                return 29;
+                return 29; // Leap year
             }
             else {
-                return 28;
+                return 28; // Not a leap year
             }
         }
         else {
-            return 29;
+            return 29; // Leap year
         }
     }
     else {
-        return 28;
+        return 28; // Not a leap year
     }
 }
+
 int main() {
     int userYear;
     cin >> userYear; 
