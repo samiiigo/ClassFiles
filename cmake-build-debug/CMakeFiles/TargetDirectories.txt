@@ -1,3 +1,0 @@
-C:/Users/samyo/OneDrive/Documents/GitHub/ClassFiles/cmake-build-debug/CMakeFiles/ClassFiles.dir
-C:/Users/samyo/OneDrive/Documents/GitHub/ClassFiles/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/samyo/OneDrive/Documents/GitHub/ClassFiles/cmake-build-debug/CMakeFiles/rebuild_cache.dir
