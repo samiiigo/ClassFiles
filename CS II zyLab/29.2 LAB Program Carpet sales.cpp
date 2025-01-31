@@ -97,7 +97,7 @@ using namespace std;
 double LABOR_COST = 0.75;
 double SALES_TAX = 0.07;
 
-double order(int, double, int, int);
+double calculateOrder(int, double, int, int);
 
 int main(){
     double carpetPrice, totalSales = 0;
@@ -105,7 +105,7 @@ int main(){
 
 
     while (cin >> carpetPrice >> roomWidth >> roomlength) {
-        totalSales += order(++orders, carpetPrice, roomWidth, roomlength);
+        totalSales += calculateOrder(++orders, carpetPrice, roomWidth, roomlength);
     }
 
     cout << fixed << setprecision(2);
@@ -114,17 +114,14 @@ int main(){
     return 0;
 }
 
-double order(int orderNum, double carpetPrice, int roomWidth, int roomlength) {
+double calculateOrder(int orderNum, double carpetPrice, int roomWidth, int roomlength) {
     cout << "Order #" << orderNum << endl;
 
-    double totalCarpetPrice, totalLaborCost, totalTax, totalCost;
-    int roomArea;
-
-    roomArea = roomWidth * roomlength;
-    totalCarpetPrice = (roomArea + (roomArea * 0.2)) * carpetPrice;
-    totalLaborCost = roomArea * LABOR_COST;
-    totalTax = (totalCarpetPrice + totalLaborCost) * SALES_TAX;
-    totalCost = totalCarpetPrice + totalLaborCost + totalTax;
+    int roomArea = roomWidth * roomlength;
+    double totalCarpetPrice = (roomArea + (roomArea * 0.2)) * carpetPrice;
+    double totalLaborCost = roomArea * LABOR_COST;
+    double totalTax = (totalCarpetPrice + totalLaborCost) * SALES_TAX;
+    double totalCost = totalCarpetPrice + totalLaborCost + totalTax;
 
     cout << "Room: " << roomArea << " sq ft" << endl;
     cout << fixed << setprecision(2);
