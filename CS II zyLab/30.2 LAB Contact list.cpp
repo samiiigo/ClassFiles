@@ -16,12 +16,40 @@ Hint: Use two vectors: One for the string names, and the other for the string ph
 
 #include <iostream>
 #include <vector>
+#include <string>
+
 using namespace std;
 
-/* Define your function here */
+string GetPhoneNumber(vector<string> nameVec, vector<string> phoneNumberVec, string contactName) {
+   for (unsigned int i = 0; i < nameVec.size(); ++i) {
+      if (nameVec[i] == contactName) {
+         return phoneNumberVec[i];
+      }
+   }
+   return "None";
+}
 
 int main() {
-   /* Type your code here */
+   int N;
+   cin >> N;
+   vector<string> names;
+   vector<string> phoneNumbers;
+
+   for (int i = 0; i < N; ++i) {
+      string name, phoneNumber;
+      cin >> ws; // consume any leading whitespace
+      getline(cin, name, ',');
+      getline(cin, phoneNumber, ' ');
+      names.push_back(name);
+      phoneNumbers.push_back(phoneNumber);
+   }
+
+   cin >> ws; // consume any leading whitespace
+   string contactName;
+   getline(cin, contactName);
+
+   string result = GetPhoneNumber(names, phoneNumbers, contactName);
+   cout << result << endl;
 
    return 0;
 }
