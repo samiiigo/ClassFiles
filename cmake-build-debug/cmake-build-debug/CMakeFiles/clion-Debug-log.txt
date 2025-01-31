@@ -1,0 +1,13 @@
+C:\Users\samyo\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "MinGW Makefiles" -S "C:\Users\samyo\OneDrive\Documents\02 cc+\ClassFiles\cmake-build-debug" -B "C:\Users\samyo\OneDrive\Documents\02 cc+\ClassFiles\cmake-build-debug"
+-- Configuring done (0.4s)
+CMake Error at CMakeLists.txt:6 (add_executable):
+  Cannot find source file:
+
+    find
+
+
+CMake Error at CMakeLists.txt:6 (add_executable):
+  No SOURCES given to target: ClassFiles
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.

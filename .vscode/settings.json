@@ -53,5 +53,6 @@
         "xmemory": "cpp",
         "xtr1common": "cpp",
         "xutility": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "C:/Users/samyo/OneDrive/Documents/02 cc+/ClassFiles/cmake-build-debug"
 }

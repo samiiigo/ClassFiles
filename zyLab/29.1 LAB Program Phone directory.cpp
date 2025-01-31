@@ -1,5 +1,4 @@
-/*
-Program Specifications: Write a program to input a phone number and output a phone directory with five international numbers. Phone numbers are divided into four parts: 1) country code, 2) area code, 3) prefix, and 4) line number. For example, a phone number in the United States is +1 (555) 123-4567.
+/*Program Specifications Write a program to input a phone number and output a phone directory with five international numbers. Phone numbers are divided into four parts: 1) country code, 2) area code, 3) prefix, and 4) line number. For example, a phone number in the United States is +1 (555) 123-4567.
 
 Note: this program is designed for incremental development. Complete each step and submit for grading before starting the next step. Only a portion of tests pass after each step but confirm progress.
 
@@ -46,24 +45,24 @@ U.S.     +1 (555)929-6453
 Brazil   +55 (555)1029-6453
 Croatia  +385 (555)929-6503
 Egypt    +20 (585)929-6453
-France   +33 (929)555-6453
- */
+France   +33 (929)555-6453*/
 
 #include <iostream>
+
 using namespace std;
 
-int main() {
-    int areaCode, prefix, lineNumber;
-
-    cin >> areaCode >> prefix >> lineNumber;
+int main(int argc, char const *argv[])
+{
+    int areaCode, prefix, lineNum;
+    cin >> areaCode >> prefix >> lineNum;
 
     cout << "Country  Phone Number" << endl;
     cout << "-------  ------------" << endl;
-    cout << "U.S.     +1 (" << areaCode << ")" << prefix << "-" << lineNumber << endl;
-    cout << "Brazil   +55 (" << areaCode << ")" << (prefix + 100) << "-" << lineNumber << endl;
-    cout << "Croatia  +385 (" << areaCode << ")" << prefix << "-" << (lineNumber + 50) << endl;
-    cout << "Egypt    +20 (" << (areaCode + 30) << ")" << prefix << "-" << lineNumber << endl;
-    cout << "France   +33 (" << prefix << ")" << areaCode << "-" << lineNumber << endl;
-
+    cout << "U.S.     +1 (" << areaCode << ")" << prefix << "-" << lineNum << endl;
+    cout << "Brazil   +55 (" << areaCode << ")" << prefix + 100 << "-" << lineNum << endl;
+    cout << "Croatia  +385 (" << areaCode << ")" << prefix << "-" << lineNum + 50 << endl;
+    cout << "Egypt    +20 (" << areaCode + 30 << ")" << prefix << "-" << lineNum << endl;
+    cout << "France   +33 (" << prefix << ")" << areaCode << "-" << lineNum << endl;
+    
     return 0;
 }
