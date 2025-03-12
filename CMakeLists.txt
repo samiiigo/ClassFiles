@@ -1,18 +1,19 @@
-cmake_minimum_required(VERSION 3.30)
-project(poker VERSION 0.1.0 LANGUAGES C CXX)
+cmake_minimum_required(VERSION 3.10)
+project(ClassFiles)
 
-set(cmake_cxx_standard 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-include(FetchContent)
-FetchContent_Declare(
-    fmt
-    GIT_REPOSITORY https://github.com/samiiigo/ClassFiles.git
-    GIT_TAG        masterx
-)
+# Set output directories
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/bin)
 
-FetchContent_MakeAvailable(fmt)
+# Find all .cpp files in the src directory
+file(GLOB SOURCES "src/*.cpp")
+file(GLOB SOURCES "CS_I zyLAB/*.cpp")
+file(GLOB SOURCES "CS_II zyLAB/*.cpp")
+file(GLOB SOURCES "LAB_Files/*.cpp")
+file(GLOB SOURCES "temp/*.cpp")
 
-#add_library(poker poker.cpp)
-add_executable(poker_test poker_test.cpp)
-target_link_libraries(poker_test PRIVATE poker fmt::fmt)
+# Add an executable target with all source files
+add_executable(ClassFiles ${SOURCES})
